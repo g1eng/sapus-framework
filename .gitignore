@@ -1,0 +1,9 @@
+/node_modules
+/.idea
+*.log
+.*.swp
+*~
+sapus-*.tgz
+.DS_Store
+
+*storybook.log

@@ -1,0 +1,4 @@
+stories/
+*.stories.tsx
+*.stories.ts
+/.idea

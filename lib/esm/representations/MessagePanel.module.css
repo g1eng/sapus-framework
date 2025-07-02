@@ -1,0 +1,35 @@
+.msgarea {
+  max-width: 800px;
+  background: #ffffff20;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.hugebtn {
+    border-radius: 100rem;
+    max-height: 25vh;
+    max-width: 25vh;
+    height: 50rem;
+    width: 50rem;
+}
+
+.hugesymbol {
+    font-size: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnmsg {
+    position: absolute !important;
+    padding-top: 7.0rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+}
+
+.bigsymbol {
+    font-size: 3.8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
