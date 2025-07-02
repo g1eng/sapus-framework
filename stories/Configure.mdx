@@ -1,0 +1,305 @@
+import { Meta } from "@storybook/blocks";
+
+import Github from "bootstrap-icons/icons/github.svg";
+import Slack from "bootstrap-icons/icons/slack.svg";
+import Youtube from "./assets/youtube.svg";
+import Tutorials from "bootstrap-icons/icons/book.svg";
+import ComponentExample from "./assets/various-buttons.png";
+import DateExample from "./assets/date-selector.png";
+import DateRangeExample from "./assets/date-range.png";
+import DataTableExample from "./assets/data-table.png";
+import DropdownExample from "./assets/category-dropdown.png";
+import PictureExample from "./assets/pic-dyn.gif";
+import Context from "./assets/context.png";
+import Docs from "./assets/docs.png";
+import Share from "./assets/share.png";
+import FigmaPlugin from "./assets/figma-plugin.png";
+import Testing from "./assets/testing.png";
+import Accessibility from "./assets/accessibility.png";
+import Theming from "./assets/theming.png";
+import AddonLibrary from "./assets/addon-library.png";
+
+export const RightArrow = () => <svg 
+    viewBox="0 0 14 14" 
+    width="8px" 
+    height="14px" 
+    style={{ 
+      marginLeft: '4px',
+      display: 'inline-block',
+      shapeRendering: 'inherit',
+      verticalAlign: 'middle',
+      fill: 'currentColor',
+      'path fill': 'currentColor'
+    }}
+>
+  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+</svg>
+
+<Meta title="About" />
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+    # The SAPUS Framework
+
+    SAPUS is a set of universal design components based on react-bootstrap and bootstrap-icons.
+    It implements context-based data controls such as icon button, dropdown with multiple keys, item slider and date range selector.
+
+    It empowers you to build rich frontend components which requires better user experiences to display various bussiness logics
+    (transactions, invoices, statics, etc.) on your web applications.
+    The components contained in the framework are inspired by, and aim to focus on achieving the [Human-Centered Design](https://www.hcdnet.org/en/).
+  </div>
+  <div className="sb-section">
+    <div className="sb-section-item">
+      <img
+        src={ComponentExample}
+        alt="Usage example"
+      />
+      <h4 className="sb-section-item-heading">Icon for Actions</h4>
+      <p className="sb-section-item-paragraph">
+      Emphasize universal design icons in [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs) and add arbitrary actions to them!
+      You can also create a button to open toolbox with [IconToolbox](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-icontoolbox--docs) to select an additional option or a submenu.
+      </p>
+    </div>
+    <div className="sb-section-item">
+      <img
+        src={DateRangeExample}
+        alt="Simplest date selection"
+      />
+      <h4 className="sb-section-item-heading">User-friendly date selection</h4>
+      <p className="sb-section-item-paragraph">
+      SAPUS provides two date selector components [DateSelector](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-dateselector--docs) and [DateSlider](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-dateslider--docs)
+      Both of them are designed to be stress-free implementations of date selection, rather than OS-default (or browser default) date pickers and they are suitable for all generation.
+      </p>
+    </div>
+    <div className="sb-section-item">
+      <img
+        src={DataTableExample}
+        alt="Date I/O for the HTML table"
+      />
+      <h4 className="sb-section-item-heading">Flexible data representation in table</h4>
+      <p className="sb-section-item-paragraph">
+      The [DataTable](https://g1eng.github.io/sapus-framework/?path=/docs/replesentations-datatable--docs) component realizes modifiable table elements.
+      It exposes `data` properties so you can import/export table data for your business logic.
+      See [implementation example](https://g1eng.github.io/sapus-framework/?path=/docs/implementation-examples-data-input-and-output-for-table--docs) and try it on your own.
+      </p>
+    </div>
+
+  </div>
+
+  <div className="sb-section">
+    <div className="sb-section-item">
+      <img
+        src={DropdownExample}
+        alt="Recognizable items"
+      />
+      <h4 className="sb-section-item-heading">Recognizable item selection</h4>
+      <p className="sb-section-item-paragraph">
+      Selected values are always displayed on [CategoryDropdown](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-categorydropdown--docs). You can use [MultiCatetoryDropdown](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-multycategorydropdown--docs) for the selection of cross conditions.
+      Make confusion-free UI to assist users to make more precise and easy works.
+      </p>
+    </div>
+    <div className="sb-section-item">
+      <img
+        src={PictureExample}
+        alt="Picture with Action"
+      />
+      <h4 className="sb-section-item-heading">Picture with Action</h4>
+      <p className="sb-section-item-paragraph">
+      You can also set the action for a [Picture](https://g1eng.github.io/sapus-framework/?path=/docs/replesentations-picture--docs)
+      However it provides built-in animation on tapping/clicking, you can define additional hook function which fires on the touch.
+      The [PictureGrid](https://g1eng.github.io/sapus-framework/?path=/docs/implementation-examples-picturegrid--sample-picture-grid) example provides image picker by the component. Check it!
+      </p>
+    </div>
+    <div className="sb-section-item" style={{padding: "3.5rem"}}>
+      <a
+          href="https://github.com/g1eng/sapus-framework"
+          target="_blank"
+      >
+      <div style={{justifyContent: "center", display: "flex"}}>
+        <img src={Github} alt="Github logo" style={{width: "3rem", height: "3rem"}}/>
+      </div>
+      </a>
+      <div style={{justifyContent: "center", display: "flex"}}>
+      <h4 className="sb-section-item-heading"><a
+          href="https://github.com/g1eng/sapus-framework"
+          target="_blank"
+          role="button"
+      >Star me on GitHub</a></h4>
+      </div>
+      <p className="sb-section-item-paragraph">
+      You are welcomed to create issues or pull requests. Join us on GitHub and don't forget to star me!
+      </p>
+
+      By Nomura Suzume <a href="https://github.com/g1eng">@g1eng</a>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div className="sb-section sb-socials">
+    <div className="sb-section-item">
+    </div>
+    <div className="sb-section-item">
+    </div>
+</div>
+
+<style>
+  {`
+  .sb-container {
+    margin-bottom: 48px;
+  }
+
+  .sb-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .sb-section-title {
+    margin-bottom: 32px;
+  }
+
+  .sb-section a:not(h1 a, h2 a, h3 a) {
+    font-size: 14px;
+  }
+
+  .sb-section-item, .sb-grid-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sb-section-item-heading {
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+    margin: 0 !important;
+  }
+  .sb-section-item-paragraph {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .sb-chevron {
+    margin-left: 5px;
+  }
+
+  .sb-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 20px;
+  }
+
+  .sb-socials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sb-socials p {
+    margin-bottom: 10px;
+  }
+
+  .sb-explore-image {
+    max-height: 32px;
+    height: 3rem;
+    align-self: flex-start;
+  }
+
+  .sb-addon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #EEF3F8;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #EEF3F8;
+    height: 180px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .sb-addon-text {
+    padding-left: 48px;
+    max-width: 240px;
+  }
+
+  .sb-addon-text h4 {
+    padding-top: 0px;
+  }
+
+  .sb-addon-img {
+    position: absolute;
+    left: 345px;
+    top: 0;
+    height: 100%;
+    width: 200%;
+    overflow: hidden;
+  }
+
+  .sb-addon-img img {
+    width: 650px;
+    transform: rotate(-15deg);
+    margin-left: 40px;
+    margin-top: -72px;
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+    backface-visibility: hidden;
+  }
+
+  @media screen and (max-width: 800px) {
+    .sb-addon-img {
+      left: 300px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .sb-section {
+      flex-direction: column;
+    }
+
+    .sb-features-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sb-socials {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sb-addon {
+      height: 280px;
+      align-items: flex-start;
+      padding-top: 32px;
+      overflow: hidden;
+    }
+
+    .sb-addon-text {
+      padding-left: 24px;
+    }
+
+    .sb-addon-img {
+      right: 0;
+      left: 0;
+      top: 130px;
+      bottom: 0;
+      overflow: hidden;
+      height: auto;
+      width: 124%;
+    }
+
+    .sb-addon-img img {
+      width: 1200px;
+      transform: rotate(-12deg);
+      margin-left: 0;
+      margin-top: 48px;
+      margin-bottom: -40px;
+      margin-left: -24px;
+    }
+  }
+  `}
+</style>

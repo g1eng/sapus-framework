@@ -1,0 +1,39 @@
+.table {
+  margin-bottom: unset;
+    text-align: center;
+    padding: 0.2rem !important;
+}
+
+
+.th {
+    text-align: center;
+}
+
+.td {
+    text-align: center;
+    padding: 0;
+}
+
+.tdActive {
+  text-align: center;
+  padding: 0 !important;
+  background-color: #b0d0ff !important;
+  animation-name: inputFocus;
+  animation-duration: 0.8s;
+  animation-iteration-count: 100;
+}
+
+.formActive {
+  position: absolute;
+  width: unset;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 1;
+  z-index: 10;
+  background-color: #ffffff00 !important;
+  transition: unset;
+  border-width: 0 !important;
+  border-color: transparent !important;
+  box-shadow: unset !important;
+  border-radius: 0 !important;
+}

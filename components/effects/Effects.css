@@ -1,0 +1,221 @@
+.sapus-fade-enter {
+  opacity: 0;
+}
+.sapus-fade-appear {
+  opacity: 0;
+}
+.sapus-fade-appear-active {
+  opacity: 1;
+  transition: opacity 150ms;
+}
+.sapus-fade-appear-done {
+  opacity: 1;
+}
+.sapus-fade-enter-active {
+  opacity: 1;
+  transition: opacity 150ms;
+}
+.sapus-fade-exit {
+  opacity: 1;
+}
+.sapus-fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms;
+}
+
+.sapus-slide {
+  position: relative;
+}
+
+.sapus-slide-left-enter {
+  opacity: 0;
+  left: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-left-entering {
+  opacity: 0;
+  left: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-left-appear {
+  opacity: 0;
+  left: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-left-appear-active {
+  opacity: 1;
+  left: 0;
+  transition: opacity 350ms, left 350ms;
+}
+
+.sapus-slide-left-appear-done {
+  opacity: 1;
+  left: 0;
+}
+.sapus-slide-left-enter-active {
+  opacity: 1;
+  left: 0;
+  transition: opacity 350ms, left 350ms;
+}
+.sapus-slide-left-exit {
+  opacity: 1;
+  left: 0;
+}
+.sapus-slide-left-exit-active {
+  opacity: 0;
+  left: -5vw;
+  pointer-events: none;
+  transition: opacity 350ms, left 350ms;
+}
+
+.sapus-slide-left-exit-done {
+  opacity: 0;
+  transition: opacity 350ms, left 350ms;
+  left: -5vw;
+  pointer-events: none;
+}
+
+.sapus-slide-right-enter {
+  opacity: 0;
+  right: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-right-entering {
+  opacity: 0;
+  right: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-right-appear {
+  opacity: 0;
+  right: 5vw;
+  pointer-events: none;
+}
+.sapus-slide-right-appear-active {
+  opacity: 1;
+  right: 0;
+  transition: opacity 350ms, right 350ms;
+}
+
+.sapus-slide-right-appear-done {
+  opacity: 1;
+  right: 0;
+}
+.sapus-slide-right-enter-active {
+  opacity: 1;
+  right: 0;
+  transition: opacity 350ms, right 350ms;
+}
+.sapus-slide-right-exit {
+  opacity: 1;
+  right: 0;
+}
+.sapus-slide-right-exit-active {
+  opacity: 0;
+  right: -5vw;
+  pointer-events: none;
+  transition: opacity 350ms, right 350ms;
+}
+
+.sapus-slide-right-exit-done {
+  opacity: 0;
+  transition: opacity 350ms, right 350ms;
+  right: -5vw;
+  pointer-events: none;
+}
+
+
+.sapus-slide-down-enter {
+  opacity: 0;
+  bottom: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-down-entering {
+  opacity: 0;
+  bottom: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-down-appear {
+  opacity: 0;
+  bottom: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-down-appear-active {
+  opacity: 1;
+  bottom: 0;
+  transition: opacity 350ms, bottom 350ms;
+}
+
+.sapus-slide-down-appear-done {
+  opacity: 1;
+  bottom: 0;
+}
+.sapus-slide-down-enter-active {
+  opacity: 1;
+  bottom: 0;
+  transition: opacity 350ms, bottom 350ms;
+}
+.sapus-slide-down-exit {
+  opacity: 1;
+  bottom: 0;
+}
+.sapus-slide-down-exit-active {
+  opacity: 0;
+  bottom: 5vh;
+  pointer-events: none;
+  transition: opacity 350ms, bottom 350ms;
+}
+
+.sapus-slide-down-exit-done {
+  opacity: 0;
+  transition: opacity 350ms, bottom 350ms;
+  bottom: 5vh;
+  pointer-events: none;
+}
+
+.sapus-slide-up-enter {
+  opacity: 0;
+  top: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-up-entering {
+  opacity: 0;
+  top: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-up-appear {
+  opacity: 0;
+  top: -5vh;
+  pointer-events: none;
+}
+.sapus-slide-up-appear-active {
+  opacity: 1;
+  top: 0;
+  transition: opacity 350ms, top 350ms;
+}
+
+.sapus-slide-up-appear-done {
+  opacity: 1;
+  top: 0;
+}
+.sapus-slide-up-enter-active {
+  opacity: 1;
+  top: 0;
+  transition: opacity 350ms, top 350ms;
+}
+.sapus-slide-up-exit {
+  opacity: 1;
+  top: 0;
+}
+.sapus-slide-up-exit-active {
+  opacity: 0;
+  top: 5vh;
+  pointer-events: none;
+  transition: opacity 350ms, top 350ms;
+}
+
+.sapus-slide-up-exit-done {
+  opacity: 0;
+  transition: opacity 350ms, top 350ms;
+  top: 5vh;
+  pointer-events: none;
+}

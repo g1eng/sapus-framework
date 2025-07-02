@@ -1,0 +1,29 @@
+.sapus-icon-toolbox > div {
+    position: relative;
+}
+
+.sapus-icon-toolbox-inner > .sapus-tb-content {
+    position: absolute;
+}
+
+.toolboxLabel {
+    position: absolute;
+    font-size: 0.8rem;
+    margin-top: -0.75rem;
+    margin-left: -1.25rem;
+    text-align: center;
+    font-weight: bold;
+    width: 5rem;
+    pointer-events: none;
+}
+
+.toolboxLabelLarge {
+    position: absolute;
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-left: -4.00rem;
+    text-align: center;
+    font-weight: bold;
+    width: 5rem;
+    pointer-events: none;
+}
