@@ -1,6 +1,6 @@
 # The SAPUS Framework
 
-SAPUS is a set of universal design components based on react-bootstrap and bootstrap-icons. It implements context-based data controls such as icon button, dropdown with multiple keys, item slider and date range selector.
+SAPUS is a set of universal design components based on react-bootstrap and bootstrap-icons. It implements context-based data controls such as icon button, dropdown with multiple keys, item slider and date selector.
 
 
 It empowers you to build rich frontend components which require better user experiences to display various bussiness logics
@@ -31,7 +31,7 @@ React >= 19.0.0
 
 ![Icon for actions](./stories/assets/various-buttons.png)
 
-Emphasize universal design icons and its associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs) and add arbitrary actions to them! You can also create a button to open toolbox with IconToolbox to select an additional option or a submenu.
+Emphasize universal design icons and their associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs)! You can also create a button to open toolbox with IconToolbox to select an additional option or a submenu.
 
 
 ## User-friendly Date Selection
@@ -44,7 +44,7 @@ SAPUS provides two date selector components [DateSelector](https://g1eng.github.
 
 ![Flexible data representation in table](./stories/assets/data-table.png)
 
-The [DataTable](https://g1eng.github.io/sapus-framework/?path=/docs/replesentations-datatable--docs) component realizes modifiable table elements. It exposes data properties so you can import/export table data for your business logic. See implementation example and try it on your own.
+The [DataTable](https://g1eng.github.io/sapus-framework/?path=/docs/replesentations-datatable--docs) component realizes replaceable table elements. It exposes data properties so you can import/export table data for your business logic. See implementation example and try it on your own.
 
 
 ## Recognizable Item Selection
