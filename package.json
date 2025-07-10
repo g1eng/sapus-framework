@@ -1,6 +1,6 @@
 {
   "name": "sapus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Human-centered (or UX-first) components based on React + Bootstrap",
   "main": "lib/esm/index.js",
   "module": "lib/esm/index.js",
