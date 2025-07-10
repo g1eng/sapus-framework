@@ -45,11 +45,11 @@
     "webpack-cli": "^6.0.1"
   },
   "scripts": {
-    "build": "yarn clean && yarn build-types && yarn build-esm && yarn build-dist",
+    "build": "yarn clean && yarn build-esm && yarn build-dist && yarn build-types",
     "build-esm": "babel components -x .es6,.js,.es,.jsx,.mjs,.ts,.tsx --out-dir lib/esm --env-name esm",
     "build-dist": "webpack",
-    "build-types": "tsc -d --emitDeclarationOnly --outDir lib/dist",
-    "clean": "{ [ -d lib ] || exit 0; } || rm -r lib",
+    "build-types": "tsc -d --emitDeclarationOnly --outDir lib/esm",
+    "clean": "{ [ -d lib ] || exit 0; } && rm -r lib",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

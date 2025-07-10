@@ -20,9 +20,6 @@ export { default as FormControl  } from  "./components/toolsets/FormControl"
 export { default as ExporterButton} from "./components/functionalities/DataExporter"
 export { default as ImporterButton } from "./components/functionalities/DataImporter"
 
-export { default as ExportControl} from "./components/chobotools/ExportControl"
-export { default as ImportControl } from "./components/chobotools/ImportControl"
-
 export type {ControlBarProps, DataTableProps} from "./components/representations/props"
 export type * from "./components/types"
 export type * from "./components/props"
