@@ -1,4 +1,4 @@
-import "./ControlBar.css";
+import "./ControlBar.module.css";
 import { ControlBarProps } from "./props";
 /**
  * ControlBar implements a float tooltip for the page control on top or bottom of corner of the page.
