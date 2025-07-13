@@ -21,9 +21,9 @@ jobs:
       - run: npm ci
       - uses: sibiraj-s/action-eslint@v4
         with:
-          eslint-args: '--ignore-path=.gitignore'
           extensions: 'ts,tsx'
           annotations: true
-          ignore-pattern: |
+          ignore-path: .eslintignore
+          ignore-patterns: |
             lib/
             stories/

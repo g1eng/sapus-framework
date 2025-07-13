@@ -7,7 +7,7 @@ import {PictureSliderProps} from "./types";
 const  PictureSlider = (props: PictureSliderProps) => {
     const captionBg = props.captionBg ? props.captionBg : "#ffffff"
 
-    let captionStyle = props.captionStyle ? props.captionStyle : {}
+    const captionStyle = props.captionStyle ? props.captionStyle : {}
     captionStyle.background = captionBg ?
         `radial-gradient(${captionBg}ff, ${captionBg}00 75%, ${captionBg}00)` : captionStyle.background ?
             captionStyle.background : undefined

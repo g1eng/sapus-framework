@@ -21,6 +21,7 @@ export type PictureGridProps = {
         roundedCircle?: boolean,
         thumbnail?: boolean,
         interactive?: boolean,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
         onImageClick?: Function,
 }
 
@@ -78,7 +79,7 @@ export type MessagePanelProps = {
 
 
 export type AccordionProps = {
-    list: any,
+    list: unknown,
     className?: string,
     children?: ReactElement | string
 }
