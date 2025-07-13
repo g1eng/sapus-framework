@@ -7,6 +7,7 @@ import {AccordionProps} from "./types";
 
 // type accordionMetaData = categories | linkMetadata | Array<ReactElement | string>
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getAccordionBody = (item: any) => {
     let k = 0
     if (item.list !== undefined && typeof item.list.length === "number") {
