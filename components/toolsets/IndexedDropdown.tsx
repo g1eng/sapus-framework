@@ -19,7 +19,10 @@ const IndexedDropdown = (props: IndexedDropdownProps) => {
         + (props.text ? `text-${props.text}` : "")
 
     //generate each DropdownItem
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const getDropdownItem = (indexList: Map<any, any>) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const domArray: Array<ReactElement<any, any>> = []
 
         Array.from(indexList.keys()).map((k) => domArray.push(

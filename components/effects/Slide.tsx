@@ -37,13 +37,13 @@ const Slide = (props: SliderProps) => {
     }
 
     const position: CSSProperties = {
-        // @ts-ignore
+        // @ts-expect-error unacceptable position attribute was assigned
         position: props.position ? props.position : "absolute",
     }
 
     return (
                 <div
-                    //@ts-ignore
+                //@ts-expect-error invalid style specified
                     style={{
                         position: "relative",
                         ...transitionStyles,

@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import {ButtonGroup} from "react-bootstrap"
-import "./CombinedDropdown.module.css"
+// import "./CombinedDropdown.module.css"
 import CategoryDropdown from "./CategoryDropdown";
 import IndexedDropdown from "./IndexedDropdown";
 import {CombinedDropdownProps} from "./props";

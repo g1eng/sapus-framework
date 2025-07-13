@@ -48,6 +48,7 @@ export interface DropdownProps {
     /**
      * hook function which fires at a click
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
     /**
      * make the dropdown badge
@@ -93,6 +94,7 @@ export interface FormControlProps extends ComponentProps<"input"> {
     placeholder?: string,
     variant?: string,
     icon?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
 }
 
@@ -128,6 +130,7 @@ export interface DateSelectorProps {
     /**
      * Hook function which is fired at change
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onChange?: Function,
     text?: string,
     /**
@@ -137,6 +140,7 @@ export interface DateSelectorProps {
     /**
      * hook function fired at change
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
     /**
      * range width
@@ -171,6 +175,7 @@ export interface IconControlProps extends ButtonProps {
     /**
      * Set a hook function which fires at a click/tap
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function
     /**
      * Set a label for the control
@@ -227,5 +232,6 @@ export interface IconToolboxProps extends IconControlProps {
     /**
      * Set hook function firing at a click/tap
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function
 }

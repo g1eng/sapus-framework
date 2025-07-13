@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { IconControlProps } from "./props";
-//@ts-ignore
+//@ts-expect-error CSS loader should parse the line
 import styles from "./IconControl.module.css"
 import {Link} from "react-router";
 

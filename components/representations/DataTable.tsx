@@ -3,7 +3,7 @@ import { FormControl, Table } from "react-bootstrap";
 import { DataSlice, DataTableProps } from "./props";
 import IconControl from "../toolsets/IconControl";
 import { getBgClass } from "../helpers";
-// @ts-ignore
+// @ts-expect-error CSS loader should parse the next line
 import styles from "./DataTable.module.css";
 import "./shared.css";
 
@@ -34,13 +34,15 @@ interface ModifiableDatumProps {
     id: string,
     datum: string | number,
     variant?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     wrapper?: Function,
-    dummy?: any
+    dummy?: unknown
     //     hook: ActionCreatorWithPayload<RecordUpdate>
 }
 
 interface DataBodyProps {
     data: Array<DataSlice>,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     dataWrapper?: Array<Function | undefined>,
     omitZero?: boolean,
     rowHeader?: DataSlice,
@@ -78,6 +80,7 @@ const DataBody = (
         }
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const ModifiableDatum = (tdProps: ModifiableDatumProps) => {
         const [d, setD] = useState(tdProps.datum)
 
@@ -93,24 +96,21 @@ const DataBody = (
                 <FormControl
                     id={tdProps.id}
                     type={"text"}
-                    // @ts-ignore
                     value={d}
                     style={document.getElementById(`t${tdProps.id}`) ? {
-                        //@ts-ignore
+                        //@ts-expect-error id is null
                         width: `calc(${document.getElementById(`t${tdProps.id}`).offsetWidth}px - ${(document.getElementById(`s${tdProps.id}`)?.innerText.length - d.toString().length) * 0.5}rem - 0.2rem)`,
                         height: `${document.getElementById(`t${tdProps.id}`)?.offsetHeight}px`,
-                        //@ts-ignore
-                        textAlign: parseFloat(d) > 0 || parseFloat(d) <= 0 ? "right" : "center",
+                        textAlign: typeof(d) === "number" ? "right" : "center",
                     } : undefined}
-                    //@ts-ignore
+                    //@ts-expect-error id is null
                     className={`${bgClass} ${textClass} ${styles.formActive} ${setTimeout(() => { document.getElementById(tdProps.id).focus(); }, 10)}`}
                     autoFocus={true}
                     onInput={(e) => {
-                        // @ts-ignore
+                        //@ts-expect-error something value
                         setD(e.target.value)
                     }}
                     onKeyDown={(e) => {
-                        // @ts-ignore
                         if (e.shiftKey && e.key === "Enter") {
                             // console.log("shift enter e", e)
                             setActiveRow(activeRow - 1)
@@ -193,7 +193,7 @@ const DataBody = (
                             dList.map((d) => (
                                 <td className={styles.td} key={`td_${rowIndex}_${colIndex++}`}>
                                     {
-                                        //@ts-ignore
+                                        //@ts-expect-error nonexistent dara wrapper function was invoked
                                         d && props.dataWrapper && props.dataWrapper[colIndex] !== undefined ? props.dataWrapper[colIndex](d) : (props.omitZero && (d == 0 || d == " 0") ? "" : d)
                                     }
                                 </td>
@@ -208,7 +208,7 @@ const DataBody = (
 }
 
 const getRevertedData = (data: Array<DataSlice>) => {
-    let newData: Array<DataSlice> = []
+    const newData: Array<DataSlice> = []
     for (let i = 0; i < data[0].length; i++) newData.push([])
 
     data.forEach((dSlice) => {
@@ -227,18 +227,23 @@ const DataTable = (props: DataTableProps) => {
     const [data, setData] = useState(props.revert ? getRevertedData(props.data) : props.data)
     const header = props.revert ? props.rowHeader : props.header,
         rowHeader = props.revert ? props.header : props.rowHeader,
-        dLength = data.length ? data[0].length : 0,
-        isInteractive = props.interactive ? props.interactive : props.interactiveControl !== undefined
+        // dLength = data.length ? data[0].length : 0,
+        // isInteractive = props.interactive ? props.interactive : props.interactiveControl !== undefined
 
     // console.log("data:", data, "propsdata:", props.data)
-    useEffect(() => {
-        // console.log("data updated")
-        setData(props.revert ? getRevertedData(props.data) : props.data)
-    }, [props.data, props.revert])
 
-    let tRowAdditional = [
-        <></>
-    ];
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _ = useEffect(
+        () => {
+            // console.log("data updated")
+            setData(props.revert ? getRevertedData(props.data) : props.data)
+        },
+        [props.data, props.revert]
+    )
+
+    // let tRowAdditional = [
+    //     <></>
+    // ];
 
     return (
         <>
@@ -281,14 +286,14 @@ const DataTable = (props: DataTableProps) => {
                                 icon={"plus"}
                                 variant={"info"}
                                 onClick={() => {
-                                    let tmpData: Array<any> = [];
+                                    const tmpData: Array<unknown> = [];
                                     for (let i = 0; i < header.length; i++)
                                         tmpData.push("");
-                                    let now = new Date()
-                                    let [y, m, d] = [now.getFullYear(), now.getMonth()+1, now.getDay()]
+                                    const now = new Date()
+                                    const [y, m, d] = [now.getFullYear(), now.getMonth()+1, now.getDay()]
                                     tmpData[0] = `${y}-${m<10? `0${m}` : m}-${d<10? `0${d}` : d}`
                                     tmpData[tmpData.length - 1] = "0"
-                                    //@ts-ignore
+                                    //@ts-expect-error no addHook property found
                                     props.addHook(tmpData)
                                 }}
                             />
