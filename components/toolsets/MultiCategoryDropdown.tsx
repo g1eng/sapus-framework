@@ -23,7 +23,7 @@ const MultiCategoryDropdown = (props: MultiCategoryDropdownProps) => {
                     text={props.text}
                     border={props.border}
                     as={ButtonGroup}
-                    //@ts-ignore
+                    //@ts-expect-error width is undefined
                     width={props.width[i]}
                 />
             )}

@@ -1,5 +1,5 @@
 import React  from "react"
-// @ts-ignore
+// @ts-expect-error CSS loader should parse the next line
 import styles from "./MessagePanel.module.css"
 import IconControl from "../toolsets/IconControl"
 import {MessagePanelProps} from "./types";
@@ -21,7 +21,7 @@ const MessagePanel = (props: MessagePanelProps) => <>
                             <>
                                 <IconControl
                                     icon={props.icon}
-                                    //@ts-ignore
+                                    //@ts-expect-error invalid size for the icon
                                     size={props.iconSize ? props.iconSize : "md"}
                                     variant={props.iconVariant}
                                     label={props.btnMsg}
@@ -50,7 +50,7 @@ const MessagePanel = (props: MessagePanelProps) => <>
                             <>
                                 <IconControl
                                     icon={props.icon}
-                                    //@ts-ignore
+                                    //@ts-expect-error invalid size for the icon
                                     size={props.iconSize ? props.iconSize : "md"}
                                     variant={props.iconVariant}
                                     label={props.btnMsg}

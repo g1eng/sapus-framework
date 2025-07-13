@@ -33,6 +33,7 @@ export type PictureProps = {
     width?: number,
     height?: number,
     className?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onImageClick?: Function,
     bordered?: boolean
     in?: boolean,
@@ -43,6 +44,7 @@ export type PictureSliderProps = {
     height?: number,
     width?: number,
     captionStyle?: CSSProperties,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onImageClick?: Function,
     captionBg?: string // caption background with #HHHHHH style
     in?: boolean,
@@ -56,6 +58,7 @@ export type PictureBadgeProps = {
     thumbnail?: boolean,
     interactive?: boolean,
     center?: boolean
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onImageClick?: Function,
 }
 

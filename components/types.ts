@@ -41,7 +41,9 @@ export type elements = {
 export type indexCategories = {
     current: string,
     indexName?: string,
-    list: Map<any, any>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    list: Map<any, any>, 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     unit?: Map<any, any>
 }
 

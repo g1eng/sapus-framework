@@ -1,12 +1,13 @@
 import React from "react";
-// @ts-ignore
+// @ts-expect-error import error
 import { csvParseRows } from "d3-dsv"
 import { getButtonClass } from "../helpers";
 import { ImporterButtonProps } from "./props";
 
 const ImporterButton = (props: ImporterButtonProps) => {
     const formId = props.id === "" ? "fileform_importer" : props.id
-    let list: Array<any> = []
+    let list: Array<unknown> = []
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     const importDataCore = (formEl: HTMLFormElement | null, parserFunc: Function) => {
         // console.log("formEL", formEl)
         if (!formEl) {
@@ -16,6 +17,7 @@ const ImporterButton = (props: ImporterButtonProps) => {
         } else if (formEl.files.length) {
             const fileObj = formEl.files[formEl.files.length - 1]
             const reader = new FileReader()
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             reader.onload = (e: any) => {
                 try {
                     // console.log("domEvent: ",e)
@@ -37,9 +39,9 @@ const ImporterButton = (props: ImporterButtonProps) => {
             return null
         }
     }
-    // @ts-ignore
+    // @ts-expect-error element seems not to be a HTML form
     const importDataCSV = (formEl: HTMLElement | null) => importDataCore(formEl, csvParseRows)
-    // @ts-ignore
+    // @ts-expect-error element seems not to be a HTML form
     const importDataJSON = (formEl: HTMLElement | null) => importDataCore(formEl, JSON.parse)
 
     const importer = props.format === "csv" ? importDataCSV : importDataJSON

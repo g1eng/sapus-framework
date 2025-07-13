@@ -20,7 +20,6 @@ const Fade = (props: FadeProps) => {
 
     return (
                 <div
-                    // @ts-ignore
                     style={{
                         ...defaultStyle,
                         ...transitionStyles

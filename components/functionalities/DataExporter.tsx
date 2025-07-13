@@ -35,7 +35,7 @@ const ExporterButton = (props: ExporterButtonProps) => {
             className={`${getButtonClass(props.variant)} ${props.className ? props.className : ""}`}
             role={"button"}
             onClick={() => {
-                // @ts-ignore
+                // @ts-expect-error unacceptable data is specified
                 setObjURL(exportFunc(props.data))
                 setTimeout(() => {
                     setObjURL("")

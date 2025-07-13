@@ -1,7 +1,5 @@
 import { imageRoot, articleRoot } from "./config";
 import { image, postId } from "./types";
-import { DataSlice } from "./representations/props";
-import React from "react";
 
 // error classes
 

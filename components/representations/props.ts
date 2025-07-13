@@ -1,6 +1,5 @@
 import { TableProps } from "react-bootstrap";
 import {ComponentProps, ReactElement} from "react";
-import {BaseProps} from "react-bootstrap/lib/ToggleButtonGroup";
 
 /**
  * DataSlice represents an array of data.
@@ -19,6 +18,7 @@ export interface DataTableProps extends TableProps {
      * elements in the table. Any function defined as a wrapper must
      * return JSX with an acceptable `chlidren` property.
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     dataWrapper?: Array<Function | undefined>,
     /**
      * Set table column header with DataSlice (array of data).

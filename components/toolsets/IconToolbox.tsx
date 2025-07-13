@@ -1,7 +1,7 @@
 import IconControl from "./IconControl";
 import React, { ReactElement, useEffect, useState } from "react";
 import {IconToolboxProps} from "./props";
-// @ts-ignore
+//@ts-expect-error CSS loader should parse the line
 import styles from "./IconToolbox.module.css"
 import Slide from "../effects/Slide";
 import {control, controls} from "../types";
@@ -52,6 +52,7 @@ const IconToolbox = (props: IconToolboxProps) => {
             </div>
         }
     </>)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const SpanLabel = (props: any) => (
         <span
             className={`${iconSize === "lg" ? `${styles.toolboxLabelLarge}` : `${styles.toolboxLabel}`}`}

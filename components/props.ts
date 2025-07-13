@@ -42,6 +42,7 @@ export interface dropdownProps {
     /**
      * hook function which fires at a click
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
 }
 
@@ -76,6 +77,7 @@ export interface formControlProps {
     placeholder?: string,
     variant?: string,
     icon?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
 }
 
@@ -87,9 +89,11 @@ export interface dateSelectorProps {
     date?: Date,
     minDate?: Date,
     maxDate?: Date,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     onChange?: Function,
     text?: string,
     variant?: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function,
 }
 
@@ -120,6 +124,7 @@ export interface IconControlProps extends ButtonProps {
     /**
      * Set a hook function which fires at a click/tap
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function
 }
 
@@ -164,5 +169,6 @@ export interface iconToolboxProps extends IconControlProps {
     /**
      * Set hook function firing at a click/tap
      */
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     hook?: Function
 }
