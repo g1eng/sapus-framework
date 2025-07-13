@@ -24,6 +24,6 @@ jobs:
           eslint-args: '--ignore-path=.gitignore'
           extensions: 'ts,tsx'
           annotations: true
-          ignore-patterns: |
+          ignore-pattern: |
             lib/
             stories/
