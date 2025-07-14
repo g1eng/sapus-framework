@@ -43,15 +43,18 @@ export const simpleToolbox: controls = {
     list: [
         {
             name: "mail",
-            icon: "envelope"
+            icon: "envelope",
+            variant: "primary",
         },
         {
             name: "web",
-            icon: "globe"
+            icon: "globe",
+            variant: "primary",
         },
         {
             name: "poweroff",
-            icon: "power"
+            icon: "power",
+            variant: "outline-danger",
         }
     ]
 }

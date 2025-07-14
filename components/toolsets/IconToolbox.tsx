@@ -21,7 +21,7 @@ const IconToolbox = (props: IconToolboxProps) => {
     const isVertical = props.slide !== "left" && props.slide !== "right"
     const iconSize = props.size
     const direction = props.slide ? props.slide : "up"
-    const marginFactor = props.size === "lg" ? 3.5 : 3
+    const marginFactor = props.size === "lg" ? 3.25 : 2.75
     const subVariant = props.toolList.variant ? props.toolList.variant : props.variant ? props.variant : undefined
     const closeDuration = props.closeDuration ? props.closeDuration / 2 : 800
     const closeDistance = props.closeDistance ? props.closeDistance : 150
@@ -30,7 +30,7 @@ const IconToolbox = (props: IconToolboxProps) => {
 
     const slideLeftMargin = direction === "left"
         ? `-${controlList.length * marginFactor + 0.25}rem`
-        : "3rem"
+        : `${marginFactor}rem`
 
     const ContentWrapper = (props: { children: ReactElement }) => (
         <>
@@ -110,7 +110,7 @@ const IconToolbox = (props: IconToolboxProps) => {
                                             key={c.name + `_${i++}`}
                                             toolList={c}
                                             className={"my-1 me-1"}
-                                            variant={subVariant}
+                                            variant={c.variant ?  c.variant : subVariant}
                                             slide={props.subSlide ? props.subSlide : isVertical ? "left" : "up"}
                                             showName={props.toolList.hasLabels}
                                             isOpen={isOpen ? undefined : false}
@@ -122,7 +122,7 @@ const IconToolbox = (props: IconToolboxProps) => {
                                                 <IconControl
                                                     icon={c.icon ? c.icon : "box"}
                                                     size={iconSize}
-                                                    variant={subVariant}
+                                                    variant={c.variant ?  c.variant : subVariant}
                                                     href={c.link ? c.link : undefined}
                                                     onClick={c.hook}
                                                     a={c.link !== undefined}

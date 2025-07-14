@@ -29,9 +29,9 @@ React >= 19.0.0
 
 ## Icon for Actions
 
-![Icon for actions](./stories/assets/various-buttons.png)
+![Icon for actions](./stories/assets/icon-actions-demo.gif)
 
-Emphasize universal design icons and their associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs)! You can also create a button to open toolbox with IconToolbox to select an additional option or a submenu.
+Emphasize universal design icons and their associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs)! You can also create a button to open toolbox with [IconToolbox](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-icontoolbox--docs) to select an additional option or a submenu.
 
 
 ## User-friendly Date Selection

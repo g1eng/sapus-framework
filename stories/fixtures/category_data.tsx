@@ -1,4 +1,4 @@
-import {categories, indexCategories} from "../../types"
+import {categories, indexCategories} from "../../components/types"
 
 export const sampleCategories: categories = {
     current: "ok",
@@ -25,8 +25,8 @@ export const another: categories = {
 export const sampleMultiCategories = [favorite, another]
 
 export const someIndices: indexCategories = {
-    current: "車",
-    indexName: "通勤方法",
+    current: "car",
+    indexName: "",
     list: new Map([
         ["車",86],
         ["電車",220],
@@ -55,17 +55,17 @@ const u30Indices: indexCategories = {
 }
 
 const positiveRate: indexCategories = {
-    current: "浦和店",
-    indexName: "延床面積",
+    current: "BIG-A Urawa Central II",
+    indexName: "floor space",
     list: new Map([
-        ["浦和店",1252],
-        ["赤羽店",905],
-        ["上野店",810]
+        ["BIG-A Urawa Central II",851],
+        ["MEGA Donki Akabane",1905],
+        ["Bic Camera Oimachi",810]
     ]),
     unit: new Map([
-        ["浦和店",<span>m<sup>2</sup> </span>],
-        ["赤羽店",<span>m<sup>2</sup></span>],
-        ["上野店",<span>m<sup>2</sup></span>]
+        ["BIG-A Urawa Central II",<span>m<sup>2</sup> </span>],
+        ["MEGA Donki Akabane",<span>m<sup>2</sup></span>],
+        ["Bic Camera Oimachi",<span>m<sup>2</sup></span>]
     ])
 }
 
@@ -77,6 +77,6 @@ export const multiIndices: Map<string,indexCategories> = new Map([
 
 export const indexSelector: categories = {
     current: "通勤方法",
-    categoryName: "対象指標",
+    categoryName: "index",
     list: ["通勤方法", "平均速度", "延床面積"]
 }
