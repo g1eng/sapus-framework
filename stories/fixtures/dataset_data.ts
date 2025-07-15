@@ -1,4 +1,4 @@
-import {combinedData, numericData, stringDataSlice} from "../../types";
+import {combinedData, numericData, stringDataSlice} from "../../components/types";
 
 
 const genRandFloatForEach = (a: Array<any>) => {

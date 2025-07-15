@@ -29,9 +29,9 @@ React >= 19.0.0
 
 ## Icon for Actions
 
-![Icon for actions](./stories/assets/various-buttons.png)
+![Icon for actions](./stories/assets/icon-actions-demo.apng)
 
-Emphasize universal design icons and their associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs)! You can also create a button to open toolbox with IconToolbox to select an additional option or a submenu.
+Emphasize universal design icons and their associated action with [IconControl](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-iconcontrol--docs)! You can also create a button to open toolbox with [IconToolbox](https://g1eng.github.io/sapus-framework/?path=/docs/toolsets-icontoolbox--docs) to select an additional option or a submenu.
 
 
 ## User-friendly Date Selection
@@ -55,7 +55,7 @@ Selected values are always displayed on [CategoryDropdown](https://g1eng.github.
 
 ## Picture with Action
 
-![Picture with Action](./stories/assets/pic-dyn.gif)
+![Picture with Action](./stories/assets/pic-dyn.apng)
 
 You can also set the action for a [Picture](https://g1eng.github.io/sapus-framework/?path=/docs/replesentations-picture--docs). However it provides built-in animation on tapping/clicking, you can define the hook function which fires on the touch. The [PictureGrid](https://g1eng.github.io/sapus-framework/?path=/docs/implementation-examples-picturegrid--sample-picture-grid) example provides image picker by the component. Check it!
 

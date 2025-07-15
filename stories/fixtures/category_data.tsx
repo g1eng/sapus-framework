@@ -1,4 +1,4 @@
-import {categories, indexCategories} from "../../types"
+import {categories, indexCategories} from "../../components/types"
 
 export const sampleCategories: categories = {
     current: "ok",
@@ -25,58 +25,58 @@ export const another: categories = {
 export const sampleMultiCategories = [favorite, another]
 
 export const someIndices: indexCategories = {
-    current: "車",
-    indexName: "通勤方法",
+    current: "car",
+    indexName: "",
     list: new Map([
-        ["車",86],
-        ["電車",220],
-        ["徒歩",17]]
+        ["car",86],
+        ["train",220],
+        ["walking",17]]
     ),
     unit: new Map([
-        ["車","人"],
-        ["電車","人"],
-        ["徒歩","人"]
+        ["car","staffs"],
+        ["train","staffs"],
+        ["walking","staffs"]
     ])
 }
 
-const u30Indices: indexCategories = {
-    current: "車",
-    indexName: "平均速度",
+export const u30Indices: indexCategories = {
+    current: "car",
+    indexName: "commuting method",
     list: new Map([
-        ["車",45],
-        ["電車",65],
-        ["徒歩",4]
+        ["car",45],
+        ["train",65],
+        ["walking",4]
     ]),
     unit: new Map([
-        ["車","km/s"],
-        ["電車","km/s"],
-        ["徒歩","km/s"]
+        ["car","km/s"],
+        ["train","km/s"],
+        ["walking","km/s"]
     ])
 }
 
 const positiveRate: indexCategories = {
-    current: "浦和店",
-    indexName: "延床面積",
+    current: "BIG-A Urawa Central II",
+    indexName: "floor space",
     list: new Map([
-        ["浦和店",1252],
-        ["赤羽店",905],
-        ["上野店",810]
+        ["BIG-A Urawa Central II",851],
+        ["MEGA Donki Akabane",1905],
+        ["Bic Camera Oimachi",810]
     ]),
     unit: new Map([
-        ["浦和店",<span>m<sup>2</sup> </span>],
-        ["赤羽店",<span>m<sup>2</sup></span>],
-        ["上野店",<span>m<sup>2</sup></span>]
+        ["BIG-A Urawa Central II",<span>m<sup>2</sup> </span>],
+        ["MEGA Donki Akabane",<span>m<sup>2</sup></span>],
+        ["Bic Camera Oimachi",<span>m<sup>2</sup></span>]
     ])
 }
 
 export const multiIndices: Map<string,indexCategories> = new Map([
-    ["通勤方法", someIndices],
-    ["平均速度", u30Indices],
-    ["延床面積", positiveRate]
+    ["commuting method", someIndices],
+    ["velocity", u30Indices],
+    ["gross floor area", positiveRate]
 ])
 
 export const indexSelector: categories = {
-    current: "通勤方法",
-    categoryName: "対象指標",
-    list: ["通勤方法", "平均速度", "延床面積"]
+    current: "commuting method",
+    categoryName: "data category",
+    list: ["commuting method", "velocity", "gross floor area"]
 }

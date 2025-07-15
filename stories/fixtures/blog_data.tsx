@@ -35,7 +35,7 @@ export const sampleImages: Array<image> = [
         caption:
             <div style={{marginTop: "-2rem"}}>
                 <h2>The Sea</h2>
-                <Button style={{marginLeft: "1rem"}} variant="warning" size="lg">今すぐ引越す</Button>
+                <Button style={{marginLeft: "1rem"}} variant="warning" size="lg">Go and Enjoy in this weekend</Button>
             </div>
     },
     {
