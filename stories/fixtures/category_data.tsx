@@ -28,29 +28,29 @@ export const someIndices: indexCategories = {
     current: "car",
     indexName: "",
     list: new Map([
-        ["車",86],
-        ["電車",220],
-        ["徒歩",17]]
+        ["car",86],
+        ["train",220],
+        ["walking",17]]
     ),
     unit: new Map([
-        ["車","人"],
-        ["電車","人"],
-        ["徒歩","人"]
+        ["car","staffs"],
+        ["train","staffs"],
+        ["walking","staffs"]
     ])
 }
 
-const u30Indices: indexCategories = {
-    current: "車",
-    indexName: "平均速度",
+export const u30Indices: indexCategories = {
+    current: "car",
+    indexName: "commuting method",
     list: new Map([
-        ["車",45],
-        ["電車",65],
-        ["徒歩",4]
+        ["car",45],
+        ["train",65],
+        ["walking",4]
     ]),
     unit: new Map([
-        ["車","km/s"],
-        ["電車","km/s"],
-        ["徒歩","km/s"]
+        ["car","km/s"],
+        ["train","km/s"],
+        ["walking","km/s"]
     ])
 }
 
@@ -70,13 +70,13 @@ const positiveRate: indexCategories = {
 }
 
 export const multiIndices: Map<string,indexCategories> = new Map([
-    ["通勤方法", someIndices],
-    ["平均速度", u30Indices],
-    ["延床面積", positiveRate]
+    ["commuting method", someIndices],
+    ["velocity", u30Indices],
+    ["gross floor area", positiveRate]
 ])
 
 export const indexSelector: categories = {
-    current: "通勤方法",
-    categoryName: "index",
-    list: ["通勤方法", "平均速度", "延床面積"]
+    current: "commuting method",
+    categoryName: "data category",
+    list: ["commuting method", "velocity", "gross floor area"]
 }
